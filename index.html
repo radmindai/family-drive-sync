@@ -24,14 +24,15 @@
 
   <div class="card">
     <h2 style="margin-top:0">What this application is</h2>
-    <p>Family Drive Sync is a small personal tool written and used by one individual (the developer). It runs on the developer's own computer or private server and copies files that the developer already has legitimate access to into the developer's <strong>own Google Drive</strong>, then reads them back to check that every copy is intact. It keeps a private log of what was copied so that nothing is copied twice.</p>
+    <p>Family Drive Sync is a small personal tool written and used by one individual (the developer). It runs on the developer's own computer or private server and does two things for the developer's own accounts: (1) it copies files that the developer already has legitimate access to into the developer's <strong>own Google Drive</strong>, then reads them back to check that every copy is intact; and (2) it <strong>reads, read-only, family school-related email</strong> that arrives in the developer's own Gmail (selected by a fixed filter) so that announcements, deadlines and attachments can be summarised for the developer and his spouse. It keeps a private log of what was copied so that nothing is copied twice.</p>
   </div>
 
   <h2>Who can use it</h2>
-  <p>Only the developer. The application is not offered to the public, is not a product or service, and no one else is invited to sign in. It does not have user accounts, a public interface, or any feature for other people.</p>
+  <p>Only the developer signs in. The application is not offered to the public, is not a product or service, and no one else is invited to sign in. It does not have user accounts or a public interface. Short summaries of school announcements may be shown to the developer's spouse, and to no one else.</p>
 
-  <h2>Why it asks Google for Drive access</h2>
-  <p>To upload files to, and verify files in, folders in the developer's own Google Drive. It asks for the Google Drive permission (<code>https://www.googleapis.com/auth/drive</code>) because some of those folders were created earlier by other tools, and a narrower permission cannot see them. It is designed never to delete files.</p>
+  <h2>Why it asks Google for Drive and Gmail access</h2>
+  <p><strong>Drive:</strong> to upload files to, and verify files in, folders in the developer's own Google Drive. It asks for the Google Drive permission (<code>https://www.googleapis.com/auth/drive</code>) because some of those folders were created earlier by other tools, and a narrower permission cannot see them. It is designed never to delete files.</p>
+  <p><strong>Gmail:</strong> to read, and only read, messages in the developer's own mailbox, using the read-only permission <code>https://www.googleapis.com/auth/gmail.messages.readonly</code>. The application cannot send, delete, modify or label email and cannot access Gmail settings. It only keeps messages that match a fixed filter for family school correspondence.</p>
 
   <h2>Google verification status</h2>
   <p>This application has <strong>not</strong> been verified by Google. It is a personal-use application with a single user, so Google shows an "unverified app" notice when the developer signs in. That notice is expected and is accepted by the developer for his own account only.</p>
