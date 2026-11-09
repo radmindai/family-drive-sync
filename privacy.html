@@ -20,7 +20,7 @@
 <main>
   <nav><a href="./">Home</a><a href="privacy.html">Privacy Policy</a></nav>
   <h1>Privacy Policy</h1>
-  <div class="meta">Family Drive Sync &middot; Effective 9 November 2026</div>
+  <div class="meta">Family Drive Sync &middot; Effective 9 November 2026 &middot; Updated 10 November 2026 (read-only Gmail access added)</div>
 
   <p>Family Drive Sync ("the application") is a private, single-user personal tool operated by one individual, Eslam Settah ("the developer"). It is not offered to the public. This policy explains what Google user data the application accesses, how it is used, and how it is protected.</p>
 
@@ -30,21 +30,22 @@
   <h2>2. What Google user data the application accesses</h2>
   <ul>
     <li><strong>Google Drive files and folders in the developer's own Drive</strong>, through the Google Drive permission <code>https://www.googleapis.com/auth/drive</code>: listing folders and files, creating folders, uploading files, and reading uploaded files back to confirm they match.</li>
-    <li>The OAuth tokens that Google issues to the application after the developer approves access. No other Google data (such as email, contacts, calendar or profile data) is requested.</li>
+    <li><strong>Gmail messages in the developer's own mailbox</strong>, through the read-only permission <code>https://www.googleapis.com/auth/gmail.messages.readonly</code>: the application lists and reads only the messages that match a fixed filter for family school-related correspondence, and downloads their attachments. It cannot send, delete, modify, label or archive any message and cannot access Gmail settings. Messages that do not match the filter are not stored.</li>
+    <li>The OAuth tokens that Google issues to the application after the developer approves access. No other Google data (such as contacts, calendar or profile data) is requested.</li>
   </ul>
   <p>The broad Drive permission is needed because some target folders were created earlier by other tools, and a narrower permission cannot see them. The application is designed never to delete files.</p>
 
   <h2>3. How the data is used</h2>
-  <p>Drive data is used only to copy the developer's own files into his own Drive folders, to verify the copies, and to keep a private log of what was copied so that nothing is copied twice. It is not used for advertising, profiling, analytics, machine-learning training, or any purpose unrelated to this function.</p>
+  <p>Drive data is used only to copy the developer's own files into his own Drive folders, to verify the copies, and to keep a private log of what was copied so that nothing is copied twice. Gmail data is used only to keep a private local copy of the filtered school-related messages so that their announcements, homework, deadlines, events and attachments can be summarised for the developer and, in short summaries, for his spouse. Message text may be read by an AI assistant that the developer runs, which may use a third-party language-model service to produce those summaries; the developer does not use the data to train any model, for advertising, profiling or analytics, or for any purpose unrelated to these functions.</p>
 
   <h2>4. Sharing and disclosure</h2>
-  <p>The application does not share, sell, rent or transfer Google user data to anyone. No third party receives it, except Google itself as the provider of the Drive service. No human other than the developer reads the data.</p>
+  <p>The application does not share, sell, rent or transfer Google user data to anyone. Short summaries of school announcements may be shown to the developer's spouse, and to no one else. No full private email is forwarded. No third party receives the data except Google itself as the provider of the Drive and Gmail services, and the language-model service described in section 3 for the sole purpose of producing the developer's summaries. No human other than the developer and his spouse reads the summaries.</p>
 
   <h2>5. Storage and protection</h2>
-  <p>OAuth tokens are stored in a private configuration file on the developer's own computer or private server, readable only by the developer's account. The application keeps no copy of Drive data on any public service. Access can be revoked at any time (see section 7).</p>
+  <p>OAuth tokens are stored in a private configuration file on the developer's own computer or private server, readable only by the developer's account. The local copy of filtered messages and attachments is kept in a private folder on the same computer or server and is not published. Message content is treated as untrusted data: links in messages are not followed and attachments are never executed. The application keeps no copy of Drive or Gmail data on any public service. Access can be revoked at any time (see section 7).</p>
 
   <h2>6. Retention and deletion</h2>
-  <p>Tokens are kept only while the developer uses the application, and are deleted when he stops using it or revokes access. Files in the developer's Drive remain under his own control and he can delete them at any time.</p>
+  <p>Tokens are kept only while the developer uses the application, and are deleted when he stops using it or revokes access. The local copy of filtered messages is kept while it is useful to the family and the developer can delete it at any time. Files in the developer's Drive remain under his own control and he can delete them at any time.</p>
 
   <h2>7. Revoking access</h2>
   <p>The developer can revoke the application's access at any time at <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>.</p>
